@@ -30,5 +30,4 @@ resource "aws_instance" "example" {
     Name = "${var.instance_name}-${count.index + 1}"
   }
 
-  subnet_id = element(var.subnet_ids, count.index % length(var.subnet_ids))
 }
